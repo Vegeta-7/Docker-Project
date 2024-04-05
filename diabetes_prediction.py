@@ -160,7 +160,7 @@ X_axis = list(range(1, 31))
 acc = pd.Series()
 x = range(1,31)
 
-acc = pd.Series()
+acc = []
 for i in list(range(1, 31)):
     knn_model = KNeighborsClassifier(n_neighbors = i)
     knn_model.fit(X_train, Y_train)
@@ -174,7 +174,7 @@ plt.xlabel("n_estimators")
 plt.ylabel("Accuracy")
 plt.grid()
 plt.show()
-print('Highest value: ',acc.values.max())
+print('Highest value: ',max(acc));
 
 # K nearest neighbors Algorithm
 knn = KNeighborsClassifier(n_neighbors = 24, metric = 'minkowski', p = 2)
