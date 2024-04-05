@@ -160,6 +160,7 @@ X_axis = list(range(1, 31))
 acc = pd.Series()
 x = range(1,31)
 
+acc = pd.Series()
 for i in list(range(1, 31)):
     knn_model = KNeighborsClassifier(n_neighbors = i)
     knn_model.fit(X_train, Y_train)
