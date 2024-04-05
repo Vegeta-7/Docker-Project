@@ -165,7 +165,7 @@ for i in list(range(1, 31)):
     knn_model = KNeighborsClassifier(n_neighbors = i)
     knn_model.fit(X_train, Y_train)
     prediction = knn_model.predict(X_test)
-    acc = acc.append(pd.Series([metrics.accuracy_score(prediction, Y_test)]))
+    acc.append([metrics.accuracy_score(prediction, Y_test)])
 
 plt.plot(X_axis, acc)
 plt.xticks(x)
